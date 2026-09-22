@@ -28,7 +28,12 @@ Pet Shop is an online store for pet products built with React.
 
 ## Backend
 
-The application uses a backend API running on:
+This project uses the Pet Shop Backend API.
+
+Backend repository:
+https://github.com/strexzy/Pet-Shop-Backend
+
+The backend runs locally on:
 
 http://localhost:3333
 
