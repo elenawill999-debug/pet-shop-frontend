@@ -1,0 +1,43 @@
+.notFoundPage {
+    max-width: 700px;
+    margin: 60px auto 80px;
+    padding: 0 20px;
+    text-align: center;
+}
+
+.notFoundImage {
+    width: 100%;
+    max-width: 550px;
+    height: auto;
+    display: block;
+    margin: 0 auto 25px;
+}
+
+.notFoundPage h1 {
+    margin: 0 0 15px;
+    font-size: 42px;
+}
+
+.notFoundPage p {
+    max-width: 500px;
+    margin: 0 auto 25px;
+
+    color: #777;
+    font-size: 16px;
+    line-height: 1.5;
+}
+
+.goHomeButton {
+    display: inline-block;
+    padding: 13px 30px;
+
+    background: #0d50ff;
+    color: white;
+
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.goHomeButton:hover {
+    background: #111;
+}

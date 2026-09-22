@@ -1,0 +1,157 @@
+.salesPage {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 40px 20px 80px;
+}
+
+.salesPage h1 {
+    margin: 0 0 30px;
+    font-size: 42px;
+}
+
+.salesFilters {
+    display: flex;
+    align-items: center;
+    gap: 35px;
+    margin-bottom: 30px;
+    font-size: 14px;
+}
+
+.salesPriceFilter,
+.salesSortFilter {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.salesPriceFilter>span,
+.salesSortFilter>span {
+    font-weight: 600;
+}
+
+.salesPriceFilter input {
+    width: 75px;
+    height: 36px;
+    padding: 0 10px;
+    border: 1px solid #eee;
+    box-sizing: border-box;
+    outline: none;
+}
+
+.salesSortFilter select {
+    width: 160px;
+    height: 36px;
+    padding: 0 10px;
+    border: 1px solid #eee;
+    background: white;
+    outline: none;
+}
+
+.salesGrid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 35px 24px;
+}
+
+.salesCard {
+    color: #222;
+    text-decoration: none;
+    min-width: 0;
+}
+
+.salesImageWrapper {
+    position: relative;
+    width: 100%;
+    aspect-ratio: 1 / 1;
+    overflow: hidden;
+}
+
+.salesImage {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    display: block;
+}
+
+.salesDiscount {
+    position: absolute;
+    top: 8px;
+    right: 8px;
+
+    padding: 5px 8px;
+    border-radius: 4px;
+
+    background: #0d50ff;
+    color: white;
+    font-size: 13px;
+    font-weight: 600;
+}
+
+.salesAddButton {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+
+    width: 100%;
+    height: 42px;
+
+    border: none;
+    background: #111;
+    color: white;
+
+    cursor: pointer;
+
+    opacity: 0;
+    transform: translateY(100%);
+    transition: 0.2s ease;
+}
+
+.salesImageWrapper:hover .salesAddButton {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.salesAddButton:hover {
+    background: #0d50ff;
+}
+
+.salesTitle {
+    margin: 12px 0 8px;
+
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.salesPrices {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.salesPrices strong {
+    font-size: 24px;
+}
+
+.salesPrices span {
+    color: #999;
+    text-decoration: line-through;
+}
+
+@media (max-width: 800px) {
+    .salesGrid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 600px) {
+    .salesFilters {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .salesGrid {
+        grid-template-columns: 1fr;
+    }
+}

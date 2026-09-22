@@ -1,0 +1,110 @@
+.discount {
+    max-width: 1000px;
+    min-height: 250px;
+    margin: 50px auto;
+    padding: 35px 45px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 40px;
+
+    background: #0d50ff;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+.discountLeft {
+    flex: 1;
+}
+
+.discountLeft h2 {
+    margin: 0;
+    color: white;
+    font-size: 42px;
+    line-height: 1.1;
+    font-weight: 700;
+}
+
+.discountForm {
+    width: 360px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.discountForm input {
+    height: 42px;
+    padding: 0 14px;
+
+    border: 1px solid rgba(255, 255, 255, 0.6);
+    border-radius: 3px;
+
+    background: transparent;
+    color: white;
+    outline: none;
+    box-sizing: border-box;
+}
+
+.discountForm input::placeholder {
+    color: rgba(255, 255, 255, 0.8);
+}
+
+.discountForm button {
+    height: 44px;
+    border: none;
+    border-radius: 3px;
+
+    background: white;
+    color: #282828;
+
+    font-size: 14px;
+    cursor: pointer;
+}
+
+.discountForm button:disabled {
+    cursor: default;
+}
+
+@media (max-width: 700px) {
+    .discount {
+        margin: 30px 16px;
+        padding: 30px 20px;
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .discountLeft h2 {
+        font-size: 32px;
+    }
+
+    .discountForm {
+        width: 100%;
+    }
+}
+
+.discountLeft {
+    position: relative;
+    align-self: stretch;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.discountPets {
+    position: absolute;
+    left: 55px;
+    bottom: 0;
+
+    width: 380px;
+    height: auto;
+
+    object-fit: contain;
+    object-position: left bottom;
+    display: block;
+}
+
+.discountSection {
+    position: relative;
+    overflow: hidden;
+}

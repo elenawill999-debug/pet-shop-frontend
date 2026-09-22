@@ -1,0 +1,177 @@
+.allProductsPage {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 40px 20px 70px;
+}
+
+.allProductsPage h1 {
+    font-size: 42px;
+    margin: 0 0 30px;
+}
+
+.productsGrid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 35px 24px;
+}
+
+.productCard {
+    text-decoration: none;
+    color: #222;
+    min-width: 0;
+}
+
+.productImageWrapper {
+    position: relative;
+    width: 100%;
+    aspect-ratio: 1 / 1;
+    overflow: hidden;
+}
+
+.productImage {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    display: block;
+}
+
+.productTitle {
+    margin: 12px 0 8px;
+    font-size: 15px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.productPrices {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.currentPrice {
+    font-size: 24px;
+    font-weight: 600;
+}
+
+.oldPrice {
+    color: #999;
+    font-size: 14px;
+    text-decoration: line-through;
+}
+
+.discountBadge {
+    position: absolute;
+    top: 8px;
+    right: 8px;
+    z-index: 2;
+
+    padding: 5px 8px;
+    border-radius: 4px;
+
+    background: #0d50ff;
+    color: white;
+    font-size: 13px;
+    font-weight: 600;
+}
+
+@media (max-width: 900px) {
+    .productsGrid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 550px) {
+    .productsGrid {
+        grid-template-columns: 1fr;
+    }
+}
+
+.productsFilters {
+    display: flex;
+    align-items: center;
+    gap: 35px;
+    margin-bottom: 30px;
+    font-size: 14px;
+}
+
+.priceFilter,
+.discountFilter,
+.sortFilter {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.priceFilter>span,
+.discountFilter>span,
+.sortFilter>span {
+    font-weight: 600;
+}
+
+.priceFilter input {
+    width: 75px;
+    height: 36px;
+    padding: 0 10px;
+    border: 1px solid #eeeeee;
+    border-radius: 3px;
+    outline: none;
+}
+
+.discountFilter {
+    cursor: pointer;
+}
+
+.discountFilter input {
+    width: 22px;
+    height: 22px;
+    cursor: pointer;
+}
+
+.sortFilter select {
+    width: 160px;
+    height: 36px;
+    padding: 0 10px;
+    border: 1px solid #eeeeee;
+    background: white;
+    outline: none;
+    cursor: pointer;
+}
+
+@media (max-width: 700px) {
+    .productsFilters {
+        align-items: flex-start;
+        flex-direction: column;
+        gap: 15px;
+    }
+}
+
+.productAddButton {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+
+    width: 100%;
+    height: 42px;
+
+    border: none;
+    background: #111;
+    color: #fff;
+
+    font-size: 14px;
+    cursor: pointer;
+
+    opacity: 0;
+    transform: translateY(100%);
+    transition: 0.2s ease;
+}
+
+.productImageWrapper:hover .productAddButton {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.productAddButton:hover {
+    background: #0d50ff;
+}
